@@ -1,0 +1,15 @@
+import AVFoundation 
+
+var sound: AVAudioPlayer?
+
+let path = Bundle.main(forResource: "example.mp3", ofType: nil)!
+let url = URL(fileURLWithPath:path)
+
+do{
+    sound = try AVAudioPlayer(contentsOf:url)
+    sound?.play()
+}catch{
+
+//coun't not file
+
+}
